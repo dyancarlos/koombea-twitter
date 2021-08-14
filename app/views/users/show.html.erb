@@ -1,6 +1,6 @@
 <hr />
 <% unless current_user.following?(@user) %>
-  <%= link_to t('views.followers.index.follow'), follow_path(@user.id), method: :post %>
+  <%= link_to t('views.followers.index.follow'), follow_path(@user), method: :post %>
 <% end %>
 
 <%= render 'shared/counters', user: @user %>

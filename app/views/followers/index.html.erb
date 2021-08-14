@@ -6,7 +6,7 @@
       <%= link_to user.name_with_username, user_path(user.object) %>
 
       <% unless @user.following?(user.object) %>
-        <%= link_to t('views.followers.index.follow'), follow_path(user.id), method: :post %>
+        <%= link_to t('views.followers.index.follow'), follow_path(user.object), method: :post %>
       <% end %>
     </li>
   <% end %>

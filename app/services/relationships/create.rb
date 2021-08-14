@@ -14,7 +14,7 @@ module Relationships
     private
 
     def followed
-      User.find_by(id: @followed_id)
+      User.find_by(username: @followed_id)
     end
   end
 end
