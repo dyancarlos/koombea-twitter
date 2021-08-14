@@ -42,3 +42,6 @@ en:
         post: 'Post'
       create:
         success: 'The tweet was created'
+    relationships:
+      create:
+        success: 'You started to follow a new user'
