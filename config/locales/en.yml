@@ -35,6 +35,8 @@ en:
     home:
       index:
         tweet: 'Tweet'
+        followers: 'Followers'
+        following: 'Following'
     tweets:
       new:
         post: 'Post'

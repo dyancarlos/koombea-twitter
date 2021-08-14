@@ -1,1 +1,11 @@
 <%= link_to t('views.home.index.tweet'), new_tweet_path %>
+
+<div>
+  <b><%= t('views.home.index.following') %></b>
+  <p><%= @following_count %></p>
+</div>
+
+<div>
+  <b><%= t('views.home.index.followers') %></b>
+  <p><%= @followers_count %></p>
+</div>
