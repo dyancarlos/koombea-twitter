@@ -10,10 +10,4 @@ class UsersController < ApplicationController
                 .paginate(page: params[:page])
                 .decorate
   end
-
-  private
-
-  def fetch_user
-    @user = User.find_by!(username: params[:user_id])
-  end
 end

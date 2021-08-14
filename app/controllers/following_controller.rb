@@ -1,6 +1,8 @@
 class FollowingController < ApplicationController
+  before_action :fetch_user
+
   def index
-    @users = current_user
+    @users = @user
                .following
                .order(full_name: :asc)
                .paginate(page: params[:page])
