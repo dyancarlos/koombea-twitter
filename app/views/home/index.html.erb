@@ -2,10 +2,10 @@
 
 <div>
   <b><%= t('views.home.index.following') %></b>
-  <p><%= @following_count %></p>
+  <p><%= link_to @following_count, following_index_path %></p>
 </div>
 
 <div>
   <b><%= t('views.home.index.followers') %></b>
-  <p><%= @followers_count %></p>
+  <p><%= link_to @followers_count, followers_path %></p>
 </div>

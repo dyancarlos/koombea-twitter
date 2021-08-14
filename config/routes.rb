@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :tweets, only: %i[new create]
   resources :following, only: :index
+  resources :followers, only: :index
 end
