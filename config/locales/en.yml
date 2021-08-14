@@ -32,6 +32,10 @@
 en:
   hello: "Hello world"
   views:
+    layout:
+      home: 'Home'
+      logged_as: 'Logged as: %{username}'
+      logout: 'Logout'
     home:
       index:
         tweet: 'Tweet'

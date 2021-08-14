@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <div>
+      <%= t('views.layout.logged_as', username: current_user.username) %> |
+      <%= link_to t('views.layout.home'), root_path %> |
+      <%= link_to t('views.layout.logout'), destroy_user_session_path, method: :delete %>
+    </div>
+
     <% flash.each do |type, msg| %>
       <div><%= msg %></div>
     <% end %>
