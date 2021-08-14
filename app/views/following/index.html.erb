@@ -1,5 +1,7 @@
 <h1>Following</h1>
 
+<%= link_to t('views.following.index.search'), new_search_path %>
+
 <ul>
   <% @users.each do |user| %>
     <li><%= link_to user.name_with_username, user_path(user.object) %></li>

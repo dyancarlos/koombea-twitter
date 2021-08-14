@@ -52,3 +52,12 @@ en:
     followers:
       index:
         follow: 'Follow'
+    following:
+      index:
+        search: 'Follow another user'
+    search:
+      new:
+        follow_user: 'Follow user'
+      create:
+        failure: 'You are already following this user'
+        success: 'You started to follow a new user'

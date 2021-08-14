@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root "home#index"
 
   resources :tweets, only: %i[new create]
+  resources :search, only: %i[new create]
 
   post 'follow/:user_id' => 'relationships#create', as: :follow
   get ':user_id' => 'users#show', as: :user
