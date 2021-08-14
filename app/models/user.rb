@@ -16,4 +16,8 @@ class User < ApplicationRecord
   def to_param
     username
   end
+
+  def following?(user)
+    following.include?(user)
+  end
 end

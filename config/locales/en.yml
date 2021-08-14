@@ -45,3 +45,6 @@ en:
     relationships:
       create:
         success: 'You started to follow a new user'
+    followers:
+      index:
+        follow: 'Follow'
