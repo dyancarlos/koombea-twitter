@@ -1,8 +1,4 @@
 class TweetsController < ApplicationController
-  def new
-    @tweet = Tweet.new
-  end
-
   def create
     @tweet_form = TweetForm.new(tweet_params)
 

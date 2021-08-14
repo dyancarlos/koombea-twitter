@@ -32,6 +32,11 @@
 en:
   hello: "Hello world"
   views:
+    home:
+      index:
+        tweet: 'Tweet'
     tweets:
+      new:
+        post: 'Post'
       create:
         success: 'The tweet was created'

@@ -1,1 +1,4 @@
-#new
+<%= form_for Tweet.new do |f| %>
+  <%= f.text_area :content %>
+  <%= f.submit t('views.tweets.new.post') %>
+<% end %>
