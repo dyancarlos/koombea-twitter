@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :followers, only: :index
 
   post 'follow/:user_id' => 'relationships#create', as: :follow
+  get ':user_id' => 'users#show', as: :user
 end

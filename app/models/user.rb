@@ -12,4 +12,8 @@ class User < ApplicationRecord
   has_many :followers, through: :follower_users, source: :follower
 
   validates :full_name, :username, presence: true
+
+  def to_param
+    username
+  end
 end
