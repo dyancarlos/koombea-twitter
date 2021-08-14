@@ -3,7 +3,7 @@ class FollowersController < ApplicationController
     @users = current_user
                .followers
                .order(full_name: :asc)
-               .paginate(page: params[:page], per_page: 10)
+               .paginate(page: params[:page])
                .decorate
   end
 end

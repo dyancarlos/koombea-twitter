@@ -9,3 +9,7 @@
   <b><%= t('views.home.index.followers') %></b>
   <p><%= link_to @followers_count, followers_path %></p>
 </div>
+
+<hr />
+<h1>Tweets</h1>
+<%= render 'tweets/index', tweets: @tweets %>

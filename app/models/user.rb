@@ -20,4 +20,8 @@ class User < ApplicationRecord
   def following?(user)
     following.include?(user)
   end
+
+  def feed
+    Tweet.where(user_id: following.pluck(:id) << id)
+  end
 end

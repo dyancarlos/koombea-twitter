@@ -1,1 +1,18 @@
-users#show
+<hr />
+<% unless current_user.following?(@user) %>
+  <%= link_to t('views.followers.index.follow'), follow_path(@user.id), method: :post %>
+<% end %>
+
+<div>
+  <b><%= t('views.home.index.following') %></b>
+  <p><%= @following_count %></p>
+</div>
+
+<div>
+  <b><%= t('views.home.index.followers') %></b>
+  <p><%= @followers_count %></p>
+</div>
+
+<hr />
+<h1>Tweets</h1>
+<%= render 'tweets/index', tweets: @tweets %>

@@ -1,0 +1,5 @@
+<% tweets.each do |tweet| %>
+  <div><%= tweet.content %></div><hr/>
+<% end %>
+
+<%= will_paginate tweets %>
