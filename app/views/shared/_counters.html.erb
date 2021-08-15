@@ -1,9 +1,13 @@
-<div class="following-count">
-  <b><%= t('views.home.index.following') %></b>
-  <p><%= link_to @following_count, following_path(user) %></p>
-</div>
+<div class="col-3">
+  <div class="row">
+    <div class="col following-count">
+      <b><%= t('views.home.index.following') %></b>
+      <p><%= link_to @following_count, following_path(user) %></p>
+    </div>
 
-<div class="followers-count">
-  <b><%= t('views.home.index.followers') %></b>
-  <p><%= link_to @followers_count, followers_path(user) %></p>
+    <div class="col followers-count">
+      <b><%= t('views.home.index.followers') %></b>
+      <p><%= link_to @followers_count, followers_path(user) %></p>
+    </div>
+  </div>
 </div>

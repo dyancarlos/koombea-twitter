@@ -1,5 +1,5 @@
 <%= form_for @form, url: search_index_path, method: :post do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <%= f.submit t('views.search.new.follow_user') %>
+  <%= f.label :username, class: "form-label" %>
+  <%= f.text_field :username, class: 'form-control' %>
+  <%= f.submit t('views.search.new.follow_user'), class: 'btn btn-primary mt-1' %>
 <% end %>

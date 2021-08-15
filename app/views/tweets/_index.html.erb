@@ -1,5 +1,9 @@
-<% tweets.each do |tweet| %>
-  <div><%= tweet.content %></div><hr/>
-<% end %>
+<div class="col">
+  <h1>Tweets</h1>
 
-<%= will_paginate tweets %>
+  <% tweets.each do |tweet| %>
+    <div><%= tweet.content %></div><hr/>
+  <% end %>
+
+  <%= will_paginate tweets %>
+</div>

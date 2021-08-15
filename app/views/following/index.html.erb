@@ -1,10 +1,14 @@
 <h1>Following</h1>
 
-<%= link_to t('views.following.index.search'), new_search_path %>
+<div class='row'>
+  <div class='col-3'>
+    <%= link_to t('views.following.index.search'), new_search_path, class: 'btn btn-primary' %>
+  </div>
+</div>
 
-<ul>
+<ul class="list-group list-group-flush">
   <% @users.each do |user| %>
-    <li><%= link_to user.name_with_username, user_path(user.object) %></li>
+    <li class="list-group-item"><%= link_to user.name_with_username, user_path(user.object) %></li>
   <% end %>
 </ul>
 

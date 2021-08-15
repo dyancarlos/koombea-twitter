@@ -14,6 +14,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 gem 'draper'
 gem 'will_paginate', '~> 3.1.0'
+gem 'bootstrap', '~> 5.1.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

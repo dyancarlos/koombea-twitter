@@ -1,10 +1,10 @@
-<hr />
 <% unless current_user.following?(@user) %>
-  <%= link_to t('views.followers.index.follow'), follow_path(@user), method: :post %>
+  <div class='row'>
+    <div class='col-3'>
+      <%= link_to t('views.followers.index.follow'), follow_path(@user), method: :post, class: 'btn btn-primary' %>
+    </div>
+  </div>
 <% end %>
 
 <%= render 'shared/counters', user: @user %>
-
-<hr />
-<h1>Tweets</h1>
 <%= render 'tweets/index', tweets: @tweets %>

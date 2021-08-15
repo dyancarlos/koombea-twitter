@@ -10,18 +10,22 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-      <div>
-        <%= t('views.layout.logged_as', username: current_user.username) %> |
-        <%= link_to t('views.layout.home'), root_path %> |
-        <%= link_to t('views.layout.logout'), destroy_user_session_path, method: :delete %>
+    <div class="container">
+      <% if user_signed_in? %>
+        <nav class="nav">
+          <a class="nav-link disabled"><%= t('views.layout.logged_as', username: current_user.username) %></a>
+          <%= link_to t('views.layout.home'), root_path, class: 'nav-link' %>
+          <%= link_to t('views.layout.logout'), destroy_user_session_path, method: :delete, class: 'nav-link' %>
+        </nav>
+      <% end %>
+
+      <% flash.each do |type, msg| %>
+        <div><%= msg %></div>
+      <% end %>
+
+      <div class="row">
+        <%= yield %>
       </div>
-    <% end %>
-
-    <% flash.each do |type, msg| %>
-      <div><%= msg %></div>
-    <% end %>
-
-    <%= yield %>
+    </div>
   </body>
 </html>
